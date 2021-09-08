@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link     rel="stylesheet"     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">
+            <img class="logo-style" src="logo.png" alt="">
+        </a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Explore</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide active" src="vid1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video/mov13.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video/mov5.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video/mov5.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1 >Архитектура и <br><span>проектирование</span></h1>
+        <p>Мы считаем главное достижение компании это доверие наших 
+            клиентов и всегда стремимся оправдать его. Наши клиенты – успешные
+             и часто очень занятые люди, но мы умеем найти каждому индивидуальный 
+             подход, почувствовать внутренние потребности заказчиков, принимать
+             во внимание их интересы, реализовать желания.</p>
+        <a href="#">Все услуги</a>
+
+        <div class="contactss">
+            
+        </div>
+
+        </div>
+        <div class="content">
+            <h1>Endi 2<br><span>O'zbekistonda</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deleniti dicta asperiores dignissimos natus eius?</p>
+        <a href="#">Read more</a>
+        </div>
+        <div class="content">
+            <h1>Endi 2<br><span>O'zbekistonda</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deleniti dicta asperiores dignissimos natus eius?</p>
+        <a href="#" >Read more</a>
+        </div>
+        <div class="content">
+            <h1>Endi 3<br><span>O'zbekistonda</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deleniti dicta asperiores dignissimos natus eius?</p>
+        <a href="#">Read more</a>
+        </div>
+        <div class="media-icons">
+
+            <div class="iconsss">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+        <div class="wordss-anim">
+            <p id="typedtext">
+                <!-- Архитектура, проектирование,<br/> дизайн и строительство в Узбекистане -->
+            </p>
+        </div>
+        </div>
+        <div class="slider-navigation ">
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+    <script>
+        const menuBtn=document.querySelector(".menu-btn");
+        const navigation=document.querySelector(".navigation");
+         
+        menuBtn.addEventListener("click",()=>{
+            menuBtn.classList.toggle("active");
+           navigation.classList.toggle("active");
+        });
+
+
+
+
+
+        // Js dlya animatsiya
+        const btns=document.querySelectorAll(".nav-btn");
+        const slides=document.querySelectorAll(".video-slide");
+        const contents=document.querySelectorAll(".content");
+
+        var sliderNav=function(manual){
+            btns.forEach((btn)=>{
+                btn.classList.remove('active');
+            });
+            slides.forEach((slide)=>{
+                slide.classList.remove('active');
+            });
+            contents.forEach((content)=>{
+                content.classList.remove('active');
+            });
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn,i)=>{
+            btn.addEventListener("click",()=>{
+                sliderNav(i);
+            });
+        });
+    </script>
+    <script src="texttyping.js"></script>
+</body>
+</html>
